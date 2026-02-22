@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oaxaca Snap - Cabina de Fotos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .bg-oaxaca {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1584894768411-99539401732e?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navegación -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-rose-600 flex items-center gap-2">
+                <i class="fas fa-camera-retro"></i>
+                <span>OaxacaSnap</span>
+            </div>
+            <nav class="hidden lg:flex space-x-6 items-center font-medium text-gray-700">
+                <a href="#inicio" class="hover:text-rose-600 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-rose-600 transition">Servicios</a>
+                <a href="#galeria" class="hover:text-rose-600 transition">Galería</a>
+                <div class="h-6 w-px bg-gray-300 mx-2"></div>
+                <a href="https://www.instagram.com/Oaxacasnap" target="_blank" class="hover:text-pink-600 text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/adan.santiago" target="_blank" class="hover:text-blue-600 text-xl"><i class="fab fa-facebook text-blue-600"></i></a>
+                <a href="https://wa.me/529511973153" class="bg-rose-600 text-white px-6 py-2 rounded-full hover:bg-rose-700 transition shadow-lg">Contacto</a>
+            </nav>
+            <button class="lg:hidden text-2xl" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú Móvil -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
+        <button class="absolute top-6 right-6 text-3xl" onclick="toggleMenu()">&times;</button>
+        <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+        <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+        <a href="#galeria" onclick="toggleMenu()">Galería</a>
+        <div class="flex space-x-8">
+            <a href="https://www.instagram.com/Oaxacasnap" target="_blank" class="text-pink-600"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/adan.santiago" target="_blank" class="text-blue-600"><i class="fab fa-facebook"></i></a>
+        </div>
+        <a href="tel:9511973153" class="text-rose-600">951 197 3153</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center bg-oaxaca text-white">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="max-w-3xl">
+                <span class="bg-rose-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">Eventos en la Ciudad de Oaxaca</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">Momentos inolvidables capturados al instante.</h1>
+                <p class="text-xl mb-8 opacity-90">Llevamos la mejor cabina de fotos a tus Bodas, XV Años y Graduaciones. ¡Diversión garantizada para tus invitados!</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://wa.me/529511973153" class="bg-rose-600 hover:bg-rose-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-all">
+                        <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                    </a>
+                    <div class="flex gap-4 items-center justify-center">
+                        <a href="https://www.instagram.com/Oaxacasnap" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-xl backdrop-blur-md transition">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/adan.santiago" target="_blank" class="bg-white/10 hover:bg-white/20 p-4 rounded-xl backdrop-blur-md transition">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Destacada -->
+    <section id="galeria" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Nuestra Experiencia</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto italic">"No solo tomamos fotos, creamos recuerdos que duran para siempre."</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl h-80 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" alt="[Cabina de fotos en boda]" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold">Bodas de Ensueño</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-80 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1541250848049-b4f71413cc30?q=80&w=1974&auto=format&fit=crop" alt="[Gente con accesorios de fiesta]" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold">XV Años Inolvidables</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-80 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop" alt="[Cabina de fotos corporativa]" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold">Graduaciones y Eventos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Final -->
+    <section id="contacto" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest text-gray-500">Informes y Reservaciones</h2>
+            <a href="tel:9511973153" class="text-4xl md:text-6xl font-bold text-rose-600 block mb-10 hover:scale-105 transition-transform">
+                951 197 3153
+            </a>
+            <div class="flex justify-center space-x-10 mb-10">
+                <a href="https://www.instagram.com/Oaxacasnap" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center text-3xl text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span class="font-bold">@Oaxacasnap</span>
+                </a>
+                <a href="https://www.facebook.com/adan.santiago" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center text-3xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <span class="font-bold">Adan Santiago</span>
+                </a>
+            </div>
+            <p class="text-gray-500">Ubicados en el corazón de Oaxaca de Juárez.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <div class="text-2xl font-bold text-rose-500 flex items-center gap-2 justify-center md:justify-start">
+                    <i class="fas fa-camera-retro"></i>
+                    <span>OaxacaSnap</span>
+                </div>
+                <p class="text-gray-400 mt-2">© 2024 OaxacaSnap - Por Adan Santiago</p>
+            </div>
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.facebook.com/adan.santiago" target="_blank" class="hover:text-rose-500 transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/Oaxacasnap" target="_blank" class="hover:text-rose-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/529511973153" class="hover:text-rose-500 transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
